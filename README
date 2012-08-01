@@ -1,1 +1,15 @@
 This file was created by JetBrains RubyMine 4.5 for binding GitHub repository
+
+To check installed gems use command:
+
+bundle check
+
+To install necessary gems:
+
+bundle install
+
+To Run WebRick:
+
+rails server -b 127.0.0.1 -p 3000 -e development
+
+it will start server on http://127.0.0.1:3000
