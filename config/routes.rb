@@ -1,7 +1,11 @@
 BulletinBoard::Application.routes.draw do
-  root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
 
-  resource :user_session
-  resource :account, :controller => "users"
+  root :controller => :home, :action => :index
+  get "home/index"
+
+  resources :user_sessions
   resources :users
+
+  match 'login' => "user_sessions#new", :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
 end
