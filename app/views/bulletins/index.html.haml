@@ -1,0 +1,23 @@
+%h1 Listing bulletins
+
+%table
+  %tr
+    %th Title
+    %th Body
+    %th Actions
+    %th Actions
+    %th Actions
+
+  - @bulletins.each do |bulletin|
+    %tr
+      %td= bulletin.title
+      %td= bulletin.body
+      %td= link_to 'Show', bulletin
+      %td= link_to 'Edit', edit_bulletin_path(bulletin)
+      %td= link_to 'Destroy', bulletin, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+  = will_paginate @bulletins, :container => false
+
+= link_to 'New Bulletin', new_bulletin_path

@@ -1,0 +1,15 @@
+= form_for @bulletin do |f|
+  -if @bulletin.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@bulletin.errors.count, "error")} prohibited this bulletin from being saved:"
+      %ul
+        - @bulletin.errors.full_messages.each do |msg|
+          %li= msg
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :body
+    = f.text_area :body
+  .actions
+    = f.submit 'Save'
