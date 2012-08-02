@@ -44,6 +44,7 @@ gem "haml"
 gem "haml-rails"
 gem "jquery-rails"
 gem 'sunspot_rails'
+gem 'will_paginate'
 
 #gem "rcov"
 

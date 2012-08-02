@@ -1,8 +1,8 @@
 class AddUserFields < ActiveRecord::Migration
   def up
-    add_column :users, :total_profile_viewed, integer, :null => false, :default => 0
-    add_column :users, :profile_viewed_today, integer, :null => false, :default => 0
-    add_column :users, :is_active, boolean, :default => false
+    add_column :users, :total_profile_viewed, :integer, :null => false, :default => 0
+    add_column :users, :profile_viewed_today, :integer, :null => false, :default => 0
+    add_column :users, :is_active, :boolean, :default => false
   end
 
   def down
